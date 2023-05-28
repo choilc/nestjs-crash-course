@@ -7,6 +7,9 @@ import {
   Query,
   Req,
   Res,
+  UsePipes,
+  ValidationPipe,
+  ParseIntPipe,
 } from '@nestjs/common';
 import { Response } from 'express';
 import { Request } from 'express';
@@ -25,6 +28,7 @@ export class UsersController {
   }
 
   @Post()
+  @UsePipes(new ValidationPipe())
   createUser(@Body() userData: CreateUserDto) {
     console.log(userData);
     return {
@@ -33,7 +37,7 @@ export class UsersController {
   }
 
   @Get(':id')
-  getUserById(@Param('id') id: string) {
+  getUserById(@Param('id', ParseIntPipe) id: number) {
     return {
       id,
     };

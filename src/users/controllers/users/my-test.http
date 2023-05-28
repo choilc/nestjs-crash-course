@@ -15,7 +15,7 @@ Content-Type: application/json
 ###
 
 # get user by id
-GET http://localhost:3001/users/12/
+GET http://localhost:3001/users/123/
 
 ###
 
