@@ -8,8 +8,8 @@ post http://localhost:3001/users/
 Content-Type: application/json
 
 {
-  "username": "choilv",
-  "email": "choilv@gmail.com"
+  "username": "sobi 1",
+  "email": "sobi1@gmail.com"
 }
 
 ###
